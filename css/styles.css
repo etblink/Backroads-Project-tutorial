@@ -51,7 +51,8 @@ Global Styles
 ===============
 */
 
-*, ::before {
+*,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -164,7 +165,7 @@ p {
   margin: 0 auto;
   max-width: 1170px;
 }
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .section-center {
     max-width: 95%;
   }
@@ -212,9 +213,10 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .hero {
-    background: linear-gradient(rgba(44,178,186,0.7), rgba(0,0,0,0.7)), url(../images/main.jpeg) center/cover no-repeat;
+    background: linear-gradient(rgba(44, 178, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../images/main.jpeg) center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
@@ -228,22 +230,24 @@ Hero
 About
 ===============
 */
-.about-img,.about-info {
-  margin-bottom:  2rem;
+.about-img,
+.about-info {
+  margin-bottom: 2rem;
 }
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .about-center {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .about-img,.about-info {
+  .about-img,
+  .about-info {
     flex: 0 0 calc(50% - 2rem);
     margin-bottom: 0;
     align-self: center;
   }
 }
-@media screen and (min-width:1170px) {
+@media screen and (min-width: 1170px) {
   .about-img::before {
     content: "";
     position: absolute;
@@ -267,7 +271,58 @@ About
 Services
 ===============
 */
-
+.services {
+  background: var(--clr-grey-10);
+}
+.service {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.service-icon {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  font-size: 2rem;
+  padding: 0.5rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.service-text {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 576px) {
+  .services-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc(33.33% - 1rem);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    text-align: left;
+  }
+  .service-icon {
+    align-self: flex-start;
+  }
+  .service-info {
+    padding-left: 1rem;
+  }
+  .service-title {
+    margin-bottom: 0.5rem;
+  }
+}
 /*
 =============== 
 Featured Tours
